@@ -65,7 +65,7 @@ const fetchAllGames = async () => {
   return allGames;
 };
 
-// Fetch ESPN for next 3 days (balanced)
+// Fetch ESPN for next 3 days
 const fetchESPNGames = async () => {
   try {
     let all = [];
@@ -77,7 +77,7 @@ const fetchESPNGames = async () => {
       const dateStr = d.toISOString().slice(0, 10).replace(/-/g, '');
 
       const res = await axios.get(
-        `https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard`,
+        'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard',
         { params: { dates: dateStr } }
       );
 
@@ -101,8 +101,6 @@ const findBroadcast = (game, espnGames) => {
   );
 
   const gameDate = formatDateKey(game.date);
-
-  const warriorsKey = normalize('Golden State Warriors');
   const opponentKey = normalize(opponent);
 
   for (const e of espnGames) {
@@ -112,12 +110,12 @@ const findBroadcast = (game, espnGames) => {
     const eventDate = formatDateKey(e.date);
     if (eventDate !== gameDate) continue;
 
-    const teamKeys = comp.competitors.map(c =>
+    const teamKeys = comp.competitors.map((c) =>
       normalize(c.team.displayName)
     );
 
-    const hasWarriors = teamKeys.some(t => t.includes('warriors'));
-    const hasOpponent = teamKeys.some(t => t.includes(opponentKey.slice(-6)));
+    const hasWarriors = teamKeys.some((t) => t.includes('warriors'));
+    const hasOpponent = teamKeys.some((t) => t.includes(opponentKey.slice(-6)));
 
     if (hasWarriors && hasOpponent) {
       return comp.broadcasts?.[0]?.names?.[0] || null;
@@ -133,7 +131,7 @@ const buildEvents = (games, espnGames) => {
   games.sort((a, b) => new Date(a.date) - new Date(b.date));
 
   return games
-    .map(game => {
+    .map((game) => {
       if (!game.home_team || !game.visitor_team) return null;
 
       const isHome = game.home_team.id === TEAM_ID;
@@ -164,14 +162,12 @@ Location: ${isHome ? 'Home (Chase Center)' : 'Away'}
         description += `
 FINAL: Warriors ${ws} - ${opponent.full_name} ${os} (${result})
 `;
-
       } else if (game.status === 'Postponed' || game.status === 'Canceled') {
         title = sanitize(
           `Warriors vs ${opponent.full_name} - ${game.status}`
         );
 
         description += `Status: ${game.status}\n`;
-
       } else {
         const timeString = formatTimeHST(hst);
 
@@ -202,40 +198,43 @@ FINAL: Warriors ${ws} - ${opponent.full_name} ${os} (${result})
 
 // ================= GENERATE ICS =================
 
-const generateICS = (events) => {
-  createEvents(events, {
-    calName: 'Golden State Warriors Schedule',
-    method: 'PUBLISH'
-  }, (error, value) => {
-    if (error) {
-      console.error('ICS generation error:', error);
-      return;
-    }
+const generateICS = (events) =>
+  new Promise((resolve, reject) => {
+    createEvents(
+      events,
+      {
+        calName: 'Golden State Warriors Schedule',
+        method: 'PUBLISH'
+      },
+      (error, value) => {
+        if (error) {
+          reject(error);
+          return;
+        }
 
-    fs.writeFileSync('warriors.ics', value);
-    console.log('✅ warriors.ics updated');
+        fs.writeFileSync('warriors.ics', value);
+        console.log('✅ warriors.ics updated');
+        resolve();
+      }
+    );
   });
-};
 
 // ================= MAIN =================
 
 const run = async () => {
   console.log(`[${new Date().toISOString()}] Sync start`);
 
-  try {
-    const games = await fetchAllGames();
-    console.log(`Fetched ${games.length} games`);
+  const games = await fetchAllGames();
+  console.log(`Fetched ${games.length} games`);
 
-    const espnGames = await fetchESPNGames();
-    console.log(`Fetched ESPN games (${espnGames.length})`);
+  const espnGames = await fetchESPNGames();
+  console.log(`Fetched ESPN games (${espnGames.length})`);
 
-    const events = buildEvents(games, espnGames);
-
-    generateICS(events);
-
-  } catch (err) {
-    console.error('❌ Sync failed:', err.message);
-  }
+  const events = buildEvents(games, espnGames);
+  await generateICS(events);
 };
 
-run();
+run().catch((err) => {
+  console.error('❌ Sync failed:', err.message);
+  process.exit(1);
+});
