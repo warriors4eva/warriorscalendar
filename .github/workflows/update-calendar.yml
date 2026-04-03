@@ -1,0 +1,39 @@
+name: Update Warriors Calendar
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 15 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  build-calendar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Generate warriors.ics
+        run: node index.js
+
+      - name: Commit updated ICS if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add warriors.ics
+          git diff --cached --quiet || git commit -m "Update warriors.ics"
+
+      - name: Push changes
+        run: git push
