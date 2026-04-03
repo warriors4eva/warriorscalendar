@@ -1,210 +1,203 @@
-require('dotenv').config();
 const axios = require('axios');
 const fs = require('fs');
 const { createEvents } = require('ics');
 
-// ================= CONFIG =================
-const TEAM_ID = 2;
-const NBA_API_URL = 'https://www.balldontlie.io/api/v1/games';
+const TEAM_ABBREV = 'GS';
+const TEAM_SLUG = 'warriors';
+const OUTPUT_FILE = 'warriors.ics';
+const ESPN_SCOREBOARD_URL =
+  'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard';
 
-// Auto season detection
-const now = new Date();
-const year = now.getMonth() >= 9 ? now.getFullYear() : now.getFullYear() - 1;
-const SEASON_START = `${year}-10-01`;
-const SEASON_END = `${year + 1}-06-30`;
+function sanitize(text = '') {
+  return String(text).replace(/[<>]/g, '').replace(/\r?\n/g, ' ').trim();
+}
 
-// ================= HELPERS =================
+function toHSTDateParts(isoString) {
+  const formatter = new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Pacific/Honolulu',
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    hour12: false,
+  });
 
-const sanitize = (text = '') =>
-  text.replace(/[<>]/g, '').replace(/\n/g, ' ').trim();
+  const parts = formatter.formatToParts(new Date(isoString));
+  const get = (type) => Number(parts.find((p) => p.type === type)?.value);
 
-const toHST = (utcDate) => {
-  const date = new Date(utcDate);
-  return new Date(date.getTime() - 10 * 60 * 60 * 1000);
-};
+  return [
+    get('year'),
+    get('month'),
+    get('day'),
+    get('hour'),
+    get('minute'),
+  ];
+}
 
-const formatTimeHST = (date) => {
-  const h = date.getHours();
-  const m = String(date.getMinutes()).padStart(2, '0');
-  const hour = h % 12 || 12;
-  const ampm = h >= 12 ? 'PM' : 'AM';
-  return `${hour}:${m} ${ampm}`;
-};
+function formatDisplayTimeHST(isoString) {
+  return new Intl.DateTimeFormat('en-US', {
+    timeZone: 'Pacific/Honolulu',
+    hour: 'numeric',
+    minute: '2-digit',
+    hour12: true,
+  }).format(new Date(isoString));
+}
 
-const normalize = (str) =>
-  str.toLowerCase().replace(/[^a-z]/g, '');
+function formatDateForEspn(date) {
+  const y = date.getUTCFullYear();
+  const m = String(date.getUTCMonth() + 1).padStart(2, '0');
+  const d = String(date.getUTCDate()).padStart(2, '0');
+  return `${y}${m}${d}`;
+}
 
-const formatDateKey = (date) => {
-  return new Date(date).toISOString().slice(0, 10);
-};
+function buildDateRange() {
+  const now = new Date();
 
-// ================= FETCH DATA =================
+  // NBA season window:
+  // If current month is Oct-Dec, season starts this year.
+  // Otherwise season starts previous year.
+  const seasonStartYear = now.getUTCMonth() >= 9 ? now.getUTCFullYear() : now.getUTCFullYear() - 1;
+  const start = new Date(Date.UTC(seasonStartYear, 9, 1));     // Oct 1
+  const end = new Date(Date.UTC(seasonStartYear + 1, 5, 30));  // Jun 30
 
-const fetchAllGames = async () => {
-  let allGames = [];
-  let page = 1;
+  const dates = [];
+  const cursor = new Date(start);
 
-  while (true) {
-    const res = await axios.get(NBA_API_URL, {
-      params: {
-        team_ids: TEAM_ID,
-        start_date: SEASON_START,
-        end_date: SEASON_END,
-        per_page: 100,
-        page
-      }
-    });
-
-    const games = res.data.data || [];
-    allGames = allGames.concat(games);
-
-    if (games.length < 100) break;
-    page++;
+  while (cursor <= end) {
+    dates.push(formatDateForEspn(cursor));
+    cursor.setUTCDate(cursor.getUTCDate() + 1);
   }
 
-  return allGames;
-};
+  return dates;
+}
 
-// Fetch ESPN for next 3 days
-const fetchESPNGames = async () => {
-  try {
-    let all = [];
+async function fetchGamesForDate(dateStr) {
+  const res = await axios.get(ESPN_SCOREBOARD_URL, {
+    params: { dates: dateStr },
+    timeout: 30000,
+  });
 
-    for (let i = 0; i < 3; i++) {
-      const d = new Date();
-      d.setDate(d.getDate() + i);
+  return Array.isArray(res.data?.events) ? res.data.events : [];
+}
 
-      const dateStr = d.toISOString().slice(0, 10).replace(/-/g, '');
+function isWarriorsEvent(event) {
+  const competitors = event?.competitions?.[0]?.competitors || [];
+  return competitors.some((c) => {
+    const abbr = c?.team?.abbreviation;
+    const shortDisplayName = c?.team?.shortDisplayName?.toLowerCase();
+    const displayName = c?.team?.displayName?.toLowerCase();
 
-      const res = await axios.get(
-        'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard',
-        { params: { dates: dateStr } }
-      );
+    return (
+      abbr === TEAM_ABBREV ||
+      shortDisplayName === TEAM_SLUG ||
+      displayName?.includes('warriors')
+    );
+  });
+}
 
-      all = all.concat(res.data.events || []);
-    }
-
-    return all;
-  } catch (err) {
-    console.error('ESPN fetch failed');
-    return [];
-  }
-};
-
-// ================= MATCH BROADCAST =================
-
-const findBroadcast = (game, espnGames) => {
-  const opponent = (
-    game.home_team.id === TEAM_ID
-      ? game.visitor_team.full_name
-      : game.home_team.full_name
+function getWarriorsAndOpponent(event) {
+  const competitors = event?.competitions?.[0]?.competitors || [];
+  const warriors = competitors.find(
+    (c) =>
+      c?.team?.abbreviation === TEAM_ABBREV ||
+      c?.team?.shortDisplayName?.toLowerCase() === TEAM_SLUG ||
+      c?.team?.displayName?.toLowerCase()?.includes('warriors')
   );
 
-  const gameDate = formatDateKey(game.date);
-  const opponentKey = normalize(opponent);
+  const opponent = competitors.find((c) => c !== warriors);
 
-  for (const e of espnGames) {
-    const comp = e.competitions?.[0];
-    if (!comp) continue;
+  return { warriors, opponent };
+}
 
-    const eventDate = formatDateKey(e.date);
-    if (eventDate !== gameDate) continue;
+function getBroadcast(event) {
+  const broadcasts = event?.competitions?.[0]?.broadcasts || [];
+  const names = broadcasts.flatMap((b) => (Array.isArray(b.names) ? b.names : []));
+  return names.length ? names.join(', ') : null;
+}
 
-    const teamKeys = comp.competitors.map((c) =>
-      normalize(c.team.displayName)
-    );
+function buildEventFromEspn(event) {
+  const competition = event?.competitions?.[0];
+  if (!competition) return null;
 
-    const hasWarriors = teamKeys.some((t) => t.includes('warriors'));
-    const hasOpponent = teamKeys.some((t) => t.includes(opponentKey.slice(-6)));
+  const { warriors, opponent } = getWarriorsAndOpponent(event);
+  if (!warriors || !opponent) return null;
 
-    if (hasWarriors && hasOpponent) {
-      return comp.broadcasts?.[0]?.names?.[0] || null;
+  const isHome = warriors.homeAway === 'home';
+  const opponentName = opponent?.team?.displayName || 'Unknown Opponent';
+  const isoDate = event.date;
+  const statusType = event?.status?.type?.description || event?.status?.type?.name || '';
+  const statusState = event?.status?.type?.state || '';
+  const broadcast = getBroadcast(event);
+
+  const warriorsScore = Number(warriors?.score ?? 0);
+  const opponentScore = Number(opponent?.score ?? 0);
+
+  let title = '';
+  let description = [
+    `Opponent: ${opponentName}`,
+    `Location: ${isHome ? 'Home' : 'Away'}`,
+  ];
+
+  if (broadcast) {
+    description.push(`Broadcast: ${broadcast}`);
+  }
+
+  if (statusState === 'post' || /final/i.test(statusType)) {
+    const result = warriorsScore > opponentScore ? 'W' : warriorsScore < opponentScore ? 'L' : 'T';
+    title = `Warriors ${warriorsScore} - ${opponentName} ${opponentScore} (${result})`;
+    description.push(`Final: Warriors ${warriorsScore} - ${opponentName} ${opponentScore} (${result})`);
+  } else if (/postponed|canceled/i.test(statusType)) {
+    title = `Warriors vs ${opponentName} - ${statusType}`;
+    description.push(`Status: ${statusType}`);
+  } else {
+    const timeHST = formatDisplayTimeHST(isoDate);
+    title = `Warriors vs ${opponentName} (${isHome ? 'HOME' : 'AWAY'}) - ${timeHST} HST`;
+    description.push(`Tipoff: ${timeHST} HST`);
+  }
+
+  return {
+    uid: `espn-nba-${event.id}@warriorscalendar`,
+    title: sanitize(title),
+    description: sanitize(description.join('\n')),
+    start: toHSTDateParts(isoDate),
+    startInputType: 'local',
+    startOutputType: 'local',
+    duration: { hours: 3 },
+    status: 'CONFIRMED',
+    busyStatus: 'BUSY',
+    productId: 'warriorscalendar',
+  };
+}
+
+async function fetchSeasonWarriorsEvents() {
+  const dates = buildDateRange();
+  const seen = new Map();
+
+  for (const dateStr of dates) {
+    const events = await fetchGamesForDate(dateStr);
+
+    for (const event of events) {
+      if (!isWarriorsEvent(event)) continue;
+      if (!seen.has(event.id)) {
+        seen.set(event.id, event);
+      }
     }
   }
 
-  return null;
-};
-
-// ================= BUILD EVENTS =================
-
-const buildEvents = (games, espnGames) => {
-  games.sort((a, b) => new Date(a.date) - new Date(b.date));
-
-  return games
-    .map((game) => {
-      if (!game.home_team || !game.visitor_team) return null;
-
-      const isHome = game.home_team.id === TEAM_ID;
-      const opponent = isHome ? game.visitor_team : game.home_team;
-
-      const hst = toHST(game.date);
-      const broadcast = findBroadcast(game, espnGames);
-
-      let title;
-      let description = `
-Opponent: ${opponent.full_name}
-Location: ${isHome ? 'Home (Chase Center)' : 'Away'}
-`;
-
-      if (broadcast) {
-        description += `Broadcast: ${broadcast}\n`;
-      }
-
-      if (game.status === 'Final') {
-        const ws = isHome ? game.home_team_score : game.visitor_team_score;
-        const os = isHome ? game.visitor_team_score : game.home_team_score;
-        const result = ws > os ? 'W' : 'L';
-
-        title = sanitize(
-          `Warriors ${ws} - ${opponent.full_name} ${os} (${result})`
-        );
-
-        description += `
-FINAL: Warriors ${ws} - ${opponent.full_name} ${os} (${result})
-`;
-      } else if (game.status === 'Postponed' || game.status === 'Canceled') {
-        title = sanitize(
-          `Warriors vs ${opponent.full_name} - ${game.status}`
-        );
-
-        description += `Status: ${game.status}\n`;
-      } else {
-        const timeString = formatTimeHST(hst);
-
-        title = sanitize(
-          `Warriors vs ${opponent.full_name} (${isHome ? 'HOME' : 'AWAY'}) - ${timeString} HST`
-        );
-      }
-
-      return {
-        uid: `warriors-${game.id}@warriors-calendar.local`,
-        title,
-        description: sanitize(description),
-        start: [
-          hst.getFullYear(),
-          hst.getMonth() + 1,
-          hst.getDate(),
-          hst.getHours(),
-          hst.getMinutes()
-        ],
-        startInputType: 'local',
-        startOutputType: 'local',
-        duration: { hours: 2 },
-        timestamp: Date.now()
-      };
-    })
+  return Array.from(seen.values())
+    .sort((a, b) => new Date(a.date) - new Date(b.date))
+    .map(buildEventFromEspn)
     .filter(Boolean);
-};
+}
 
-// ================= GENERATE ICS =================
-
-const generateICS = (events) =>
-  new Promise((resolve, reject) => {
+function writeICS(events) {
+  return new Promise((resolve, reject) => {
     createEvents(
       events,
       {
         calName: 'Golden State Warriors Schedule',
-        method: 'PUBLISH'
+        method: 'PUBLISH',
       },
       (error, value) => {
         if (error) {
@@ -212,29 +205,28 @@ const generateICS = (events) =>
           return;
         }
 
-        fs.writeFileSync('warriors.ics', value);
-        console.log('✅ warriors.ics updated');
+        fs.writeFileSync(OUTPUT_FILE, value, 'utf8');
+        console.log(`✅ ${OUTPUT_FILE} updated`);
         resolve();
       }
     );
   });
+}
 
-// ================= MAIN =================
-
-const run = async () => {
+async function run() {
   console.log(`[${new Date().toISOString()}] Sync start`);
 
-  const games = await fetchAllGames();
-  console.log(`Fetched ${games.length} games`);
+  const events = await fetchSeasonWarriorsEvents();
+  console.log(`Fetched ${events.length} Warriors events from ESPN`);
 
-  const espnGames = await fetchESPNGames();
-  console.log(`Fetched ESPN games (${espnGames.length})`);
+  if (!events.length) {
+    throw new Error('No Warriors events found from ESPN');
+  }
 
-  const events = buildEvents(games, espnGames);
-  await generateICS(events);
-};
+  await writeICS(events);
+}
 
 run().catch((err) => {
-  console.error('❌ Sync failed:', err.message);
+  console.error(`❌ Sync failed: ${err.message}`);
   process.exit(1);
 });
