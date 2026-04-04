@@ -12,26 +12,15 @@ function sanitize(text = '') {
   return String(text).replace(/[<>]/g, '').replace(/\r?\n/g, ' ').trim();
 }
 
-function toHSTDateParts(isoString) {
-  const formatter = new Intl.DateTimeFormat('en-CA', {
-    timeZone: 'Pacific/Honolulu',
-    year: 'numeric',
-    month: 'numeric',
-    day: 'numeric',
-    hour: 'numeric',
-    minute: 'numeric',
-    hour12: false,
-  });
-
-  const parts = formatter.formatToParts(new Date(isoString));
-  const get = (type) => Number(parts.find((p) => p.type === type)?.value);
+function toUTCDateParts(isoString) {
+  const d = new Date(isoString);
 
   return [
-    get('year'),
-    get('month'),
-    get('day'),
-    get('hour'),
-    get('minute'),
+    d.getUTCFullYear(),
+    d.getUTCMonth() + 1,
+    d.getUTCDate(),
+    d.getUTCHours(),
+    d.getUTCMinutes(),
   ];
 }
 
@@ -54,12 +43,11 @@ function formatDateForEspn(date) {
 function buildDateRange() {
   const now = new Date();
 
-  // NBA season window:
-  // If current month is Oct-Dec, season starts this year.
-  // Otherwise season starts previous year.
-  const seasonStartYear = now.getUTCMonth() >= 9 ? now.getUTCFullYear() : now.getUTCFullYear() - 1;
-  const start = new Date(Date.UTC(seasonStartYear, 9, 1));     // Oct 1
-  const end = new Date(Date.UTC(seasonStartYear + 1, 5, 30));  // Jun 30
+  const seasonStartYear =
+    now.getUTCMonth() >= 9 ? now.getUTCFullYear() : now.getUTCFullYear() - 1;
+
+  const start = new Date(Date.UTC(seasonStartYear, 9, 1)); // Oct 1
+  const end = new Date(Date.UTC(seasonStartYear + 1, 5, 30)); // Jun 30
 
   const dates = [];
   const cursor = new Date(start);
@@ -98,6 +86,7 @@ function isWarriorsEvent(event) {
 
 function getWarriorsAndOpponent(event) {
   const competitors = event?.competitions?.[0]?.competitors || [];
+
   const warriors = competitors.find(
     (c) =>
       c?.team?.abbreviation === TEAM_ABBREV ||
@@ -112,7 +101,9 @@ function getWarriorsAndOpponent(event) {
 
 function getBroadcast(event) {
   const broadcasts = event?.competitions?.[0]?.broadcasts || [];
-  const names = broadcasts.flatMap((b) => (Array.isArray(b.names) ? b.names : []));
+  const names = broadcasts.flatMap((b) =>
+    Array.isArray(b.names) ? b.names : []
+  );
   return names.length ? names.join(', ') : null;
 }
 
@@ -126,15 +117,15 @@ function buildEventFromEspn(event) {
   const isHome = warriors.homeAway === 'home';
   const opponentName = opponent?.team?.displayName || 'Unknown Opponent';
   const isoDate = event.date;
-  const statusType = event?.status?.type?.description || event?.status?.type?.name || '';
+  const statusType =
+    event?.status?.type?.description || event?.status?.type?.name || '';
   const statusState = event?.status?.type?.state || '';
   const broadcast = getBroadcast(event);
 
   const warriorsScore = Number(warriors?.score ?? 0);
   const opponentScore = Number(opponent?.score ?? 0);
 
-  let title = '';
-  let description = [
+  const description = [
     `Opponent: ${opponentName}`,
     `Location: ${isHome ? 'Home' : 'Away'}`,
   ];
@@ -143,10 +134,20 @@ function buildEventFromEspn(event) {
     description.push(`Broadcast: ${broadcast}`);
   }
 
+  let title = '';
+
   if (statusState === 'post' || /final/i.test(statusType)) {
-    const result = warriorsScore > opponentScore ? 'W' : warriorsScore < opponentScore ? 'L' : 'T';
+    const result =
+      warriorsScore > opponentScore
+        ? 'W'
+        : warriorsScore < opponentScore
+        ? 'L'
+        : 'T';
+
     title = `Warriors ${warriorsScore} - ${opponentName} ${opponentScore} (${result})`;
-    description.push(`Final: Warriors ${warriorsScore} - ${opponentName} ${opponentScore} (${result})`);
+    description.push(
+      `Final: Warriors ${warriorsScore} - ${opponentName} ${opponentScore} (${result})`
+    );
   } else if (/postponed|canceled/i.test(statusType)) {
     title = `Warriors vs ${opponentName} - ${statusType}`;
     description.push(`Status: ${statusType}`);
@@ -160,9 +161,9 @@ function buildEventFromEspn(event) {
     uid: `espn-nba-${event.id}@warriorscalendar`,
     title: sanitize(title),
     description: sanitize(description.join('\n')),
-    start: toHSTDateParts(isoDate),
-    startInputType: 'local',
-    startOutputType: 'local',
+    start: toUTCDateParts(isoDate),
+    startInputType: 'utc',
+    startOutputType: 'utc',
     duration: { hours: 3 },
     status: 'CONFIRMED',
     busyStatus: 'BUSY',
