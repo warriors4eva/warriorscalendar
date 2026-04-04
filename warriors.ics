@@ -8,7 +8,7 @@ X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
 UID:espn-nba-401812677@warriorscalendar
 SUMMARY:Warriors 111 - Los Angeles Lakers 103 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251005T143000
 DESCRIPTION:Opponent: Los Angeles Lakers Location: Home Broadcast: ESPN\, N
 	BC Sports BA\, Spectrum Sports Net\, Spectrum Sports Net + Final: Warriors
@@ -20,7 +20,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401812689@warriorscalendar
 SUMMARY:Warriors 129 - Portland Trail Blazers 123 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251008T160000
 DESCRIPTION:Opponent: Portland Trail Blazers Location: Home Broadcast: KUNP
 	 16\, BlazerVision\, NBC Sports BA\, NBA TV Final: Warriors 129 - Portland
@@ -32,7 +32,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401812710@warriorscalendar
 SUMMARY:Warriors 116 - Los Angeles Lakers 126 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251012T153000
 DESCRIPTION:Opponent: Los Angeles Lakers Location: Away Broadcast: Spectrum
 	 Sports Net\, Spectrum Sports Net +\, NBA League Pass Final: Warriors 116 
@@ -44,7 +44,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401812720@warriorscalendar
 SUMMARY:Warriors 118 - Portland Trail Blazers 111 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251014T160000
 DESCRIPTION:Opponent: Portland Trail Blazers Location: Away Broadcast: KUNP
 	 16\, BlazerVision\, NBA League Pass Final: Warriors 118 - Portland Trail 
@@ -56,7 +56,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401812737@warriorscalendar
 SUMMARY:Warriors 103 - LA Clippers 106 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251017T160000
 DESCRIPTION:Opponent: LA Clippers Location: Home Broadcast: NBC Sports BA\,
 	 NBA League Pass Final: Warriors 103 - LA Clippers 106 (L)
@@ -67,7 +67,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401809244@warriorscalendar
 SUMMARY:Warriors 119 - Los Angeles Lakers 109 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251021T160000
 DESCRIPTION:Opponent: Los Angeles Lakers Location: Away Broadcast: NBC\, Pe
 	acock Final: Warriors 119 - Los Angeles Lakers 109 (W)
@@ -78,7 +78,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401809237@warriorscalendar
 SUMMARY:Warriors 137 - Denver Nuggets 131 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251023T161700
 DESCRIPTION:Opponent: Denver Nuggets Location: Home Broadcast: ESPN\, NBC S
 	ports BA Final: Warriors 137 - Denver Nuggets 131 (W)
@@ -89,7 +89,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401809952@warriorscalendar
 SUMMARY:Warriors 119 - Portland Trail Blazers 139 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251024T160000
 DESCRIPTION:Opponent: Portland Trail Blazers Location: Away Broadcast: KUNP
 	 16\, BlazerVision\, NBC Sports BA\, NBA League Pass Final: Warriors 119 -
@@ -101,7 +101,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401809976@warriorscalendar
 SUMMARY:Warriors 131 - Memphis Grizzlies 118 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251027T160000
 DESCRIPTION:Opponent: Memphis Grizzlies Location: Home Broadcast: NBC Sport
 	s BA\, NBA League Pass\, FanDuel SN SE Final: Warriors 131 - Memphis Grizz
@@ -113,7 +113,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401809982@warriorscalendar
 SUMMARY:Warriors 98 - LA Clippers 79 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251028T170000
 DESCRIPTION:Opponent: LA Clippers Location: Home Broadcast: NBC\, Peacock\,
 	 NBC Sports BA Final: Warriors 98 - LA Clippers 79 (W)
@@ -124,7 +124,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401809994@warriorscalendar
 SUMMARY:Warriors 110 - Milwaukee Bucks 120 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251030T140000
 DESCRIPTION:Opponent: Milwaukee Bucks Location: Away Broadcast: NBC Sports 
 	BA\, NBA TV\, FanDuel SN WI Final: Warriors 110 - Milwaukee Bucks 120 (L)
@@ -135,7 +135,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401809999@warriorscalendar
 SUMMARY:Warriors 109 - Indiana Pacers 114 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251101T130000
 DESCRIPTION:Opponent: Indiana Pacers Location: Away Broadcast: FanDuel SN I
 	N\, NBC Sports BA\, NBA TV Final: Warriors 109 - Indiana Pacers 114 (L)
@@ -146,7 +146,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810024@warriorscalendar
 SUMMARY:Warriors 118 - Phoenix Suns 107 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251104T170000
 DESCRIPTION:Opponent: Phoenix Suns Location: Home Broadcast: NBC Sports BA\
 	, Arizona's Family 3TV\, Suns Live\, NBA League Pass Final: Warriors 118 -
@@ -158,7 +158,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810036@warriorscalendar
 SUMMARY:Warriors 116 - Sacramento Kings 121 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251105T170000
 DESCRIPTION:Opponent: Sacramento Kings Location: Away Broadcast: NBC Sports
 	 BA\, NBA League Pass\, NBC Sports CA Final: Warriors 116 - Sacramento Kin
@@ -170,7 +170,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401809779@warriorscalendar
 SUMMARY:Warriors 104 - Denver Nuggets 129 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251107T170000
 DESCRIPTION:Opponent: Denver Nuggets Location: Away Broadcast: Prime Video 
 	Final: Warriors 104 - Denver Nuggets 129 (L)
@@ -181,7 +181,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810051@warriorscalendar
 SUMMARY:Warriors 114 - Indiana Pacers 83 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251109T153000
 DESCRIPTION:Opponent: Indiana Pacers Location: Home Broadcast: FanDuel SN I
 	N\, NBA League Pass\, NBC Sports BA Final: Warriors 114 - Indiana Pacers 8
@@ -193,7 +193,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810065@warriorscalendar
 SUMMARY:Warriors 102 - Oklahoma City Thunder 126 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251111T150000
 DESCRIPTION:Opponent: Oklahoma City Thunder Location: Away Broadcast: NBC S
 	ports BA\, NBA League Pass\, FanDuel SN OK Final: Warriors 102 - Oklahoma 
@@ -205,7 +205,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810075@warriorscalendar
 SUMMARY:Warriors 125 - San Antonio Spurs 120 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251112T150000
 DESCRIPTION:Opponent: San Antonio Spurs Location: Away Broadcast: NBC Sport
 	s BA\, NBA League Pass\, FanDuel SN SW Final: Warriors 125 - San Antonio S
@@ -217,7 +217,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401809789@warriorscalendar
 SUMMARY:Warriors 109 - San Antonio Spurs 108 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251114T163000
 DESCRIPTION:Opponent: San Antonio Spurs Location: Away Broadcast: Prime Vid
 	eo Final: Warriors 109 - San Antonio Spurs 108 (W)
@@ -228,7 +228,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810092@warriorscalendar
 SUMMARY:Warriors 124 - New Orleans Pelicans 106 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251116T140000
 DESCRIPTION:Opponent: New Orleans Pelicans Location: Away Broadcast: GCSEN\
 	, Pelicans.com\, NBC Sports BA\, NBA League Pass Final: Warriors 124 - New
@@ -240,7 +240,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810104@warriorscalendar
 SUMMARY:Warriors 113 - Orlando Magic 121 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251118T140000
 DESCRIPTION:Opponent: Orlando Magic Location: Away Broadcast: FanDuel SN FL
 	\, NBC Sports BA\, NBA League Pass Final: Warriors 113 - Orlando Magic 121
@@ -252,7 +252,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810112@warriorscalendar
 SUMMARY:Warriors 96 - Miami Heat 110 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251119T143000
 DESCRIPTION:Opponent: Miami Heat Location: Away Broadcast: FanDuel SN Sun\,
 	 NBC Sports BA Final: Warriors 96 - Miami Heat 110 (L)
@@ -263,7 +263,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401809798@warriorscalendar
 SUMMARY:Warriors 123 - Portland Trail Blazers 127 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251121T170000
 DESCRIPTION:Opponent: Portland Trail Blazers Location: Home Broadcast: NBC 
 	Sports BA\, KUNP 16\, BlazerVision\, NBA League Pass Final: Warriors 123 -
@@ -275,7 +275,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810146@warriorscalendar
 SUMMARY:Warriors 134 - Utah Jazz 117 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251124T170000
 DESCRIPTION:Opponent: Utah Jazz Location: Home Broadcast: NBC Sports BA\, K
 	JZZ-TV\, Jazz+\, NBA League Pass Final: Warriors 134 - Utah Jazz 117 (W)
@@ -286,7 +286,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401809808@warriorscalendar
 SUMMARY:Warriors 100 - Houston Rockets 104 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251126T170000
 DESCRIPTION:Opponent: Houston Rockets Location: Home Broadcast: ESPN\, NBC 
 	Sports BA Final: Warriors 100 - Houston Rockets 104 (L)
@@ -297,7 +297,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810153@warriorscalendar
 SUMMARY:Warriors 104 - New Orleans Pelicans 96 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251129T153000
 DESCRIPTION:Opponent: New Orleans Pelicans Location: Home Broadcast: GCSEN\
 	, Pelicans.com\, NBC Sports BA\, NBA TV Final: Warriors 104 - New Orleans 
@@ -309,7 +309,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810178@warriorscalendar
 SUMMARY:Warriors 112 - Oklahoma City Thunder 124 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251202T180000
 DESCRIPTION:Opponent: Oklahoma City Thunder Location: Home Broadcast: NBC\,
 	 Peacock\, NBC Sports BA\, FanDuel SN OK Final: Warriors 112 - Oklahoma Ci
@@ -321,7 +321,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810188@warriorscalendar
 SUMMARY:Warriors 98 - Philadelphia 76ers 99 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251204T140000
 DESCRIPTION:Opponent: Philadelphia 76ers Location: Away Broadcast: NBC Spor
 	ts BA\, NBC Sports Phil\, NBA TV Final: Warriors 98 - Philadelphia 76ers 9
@@ -333,7 +333,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810207@warriorscalendar
 SUMMARY:Warriors 99 - Cleveland Cavaliers 94 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251206T143000
 DESCRIPTION:Opponent: Cleveland Cavaliers Location: Away Broadcast: FanDuel
 	 SN OH\, NBC Sports BA\, NBA TV Final: Warriors 99 - Cleveland Cavaliers 9
@@ -345,7 +345,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810216@warriorscalendar
 SUMMARY:Warriors 123 - Chicago Bulls 91 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251207T140000
 DESCRIPTION:Opponent: Chicago Bulls Location: Away Broadcast: CHSN\, NBC Sp
 	orts BA\, NBA League Pass Final: Warriors 123 - Chicago Bulls 91 (W)
@@ -356,7 +356,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401836796@warriorscalendar
 SUMMARY:Warriors 120 - Minnesota Timberwolves 127 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251212T170000
 DESCRIPTION:Opponent: Minnesota Timberwolves Location: Home Broadcast: NBA 
 	TV\, NBC Sports BA\, FanDuel SN North Final: Warriors 120 - Minnesota Timb
@@ -368,7 +368,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401836802@warriorscalendar
 SUMMARY:Warriors 131 - Portland Trail Blazers 136 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251214T160000
 DESCRIPTION:Opponent: Portland Trail Blazers Location: Away Broadcast: NBC 
 	Sports BA\, KUNP 16\, BlazerVision Final: Warriors 131 - Portland Trail Bl
@@ -380,7 +380,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810233@warriorscalendar
 SUMMARY:Warriors 98 - Phoenix Suns 99 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251218T160000
 DESCRIPTION:Opponent: Phoenix Suns Location: Away Broadcast: NBC Sports BA\
 	, NBA League Pass\, Arizona's Family 3TV\, Suns Live Final: Warriors 98 - 
@@ -392,7 +392,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810247@warriorscalendar
 SUMMARY:Warriors 119 - Phoenix Suns 116 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251220T153000
 DESCRIPTION:Opponent: Phoenix Suns Location: Home Broadcast: NBC Sports BA\
 	, Arizona's Family 3TV\, Suns Live\, NBA League Pass Final: Warriors 119 -
@@ -404,7 +404,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810262@warriorscalendar
 SUMMARY:Warriors 120 - Orlando Magic 97 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251222T170000
 DESCRIPTION:Opponent: Orlando Magic Location: Home Broadcast: NBC Sports BA
 	\, FanDuel SN FL\, NBA League Pass Final: Warriors 120 - Orlando Magic 97 
@@ -416,7 +416,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401809240@warriorscalendar
 SUMMARY:Warriors 126 - Dallas Mavericks 116 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251225T121700
 DESCRIPTION:Opponent: Dallas Mavericks Location: Home Broadcast: ABC\, ESPN
 	 Final: Warriors 126 - Dallas Mavericks 116 (W)
@@ -427,7 +427,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810296@warriorscalendar
 SUMMARY:Warriors 127 - Toronto Raptors 141 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251228T103000
 DESCRIPTION:Opponent: Toronto Raptors Location: Away Broadcast: NBC Sports 
 	BA\, NBA League Pass\, Sportsnet Final: Warriors 127 - Toronto Raptors 141
@@ -439,7 +439,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810304@warriorscalendar
 SUMMARY:Warriors 120 - Brooklyn Nets 107 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251229T143000
 DESCRIPTION:Opponent: Brooklyn Nets Location: Away Broadcast: YES\, NBC Spo
 	rts BA\, NBA League Pass Final: Warriors 120 - Brooklyn Nets 107 (W)
@@ -450,7 +450,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810317@warriorscalendar
 SUMMARY:Warriors 132 - Charlotte Hornets 125 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20251231T080000
 DESCRIPTION:Opponent: Charlotte Hornets Location: Away Broadcast: FanDuel S
 	N SE\, NBC Sports BA\, NBA TV Final: Warriors 132 - Charlotte Hornets 125 
@@ -462,7 +462,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810339@warriorscalendar
 SUMMARY:Warriors 94 - Oklahoma City Thunder 131 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260102T170000
 DESCRIPTION:Opponent: Oklahoma City Thunder Location: Home Broadcast: Prime
 	 Video\, NBC Sports BA\, FanDuel SN OK Final: Warriors 94 - Oklahoma City 
@@ -474,7 +474,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810347@warriorscalendar
 SUMMARY:Warriors 123 - Utah Jazz 114 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260103T170000
 DESCRIPTION:Opponent: Utah Jazz Location: Home Broadcast: NBC Sports BA\, K
 	JZZ-TV\, Jazz+\, NBA League Pass Final: Warriors 123 - Utah Jazz 114 (W)
@@ -485,7 +485,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810363@warriorscalendar
 SUMMARY:Warriors 102 - LA Clippers 103 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260105T170000
 DESCRIPTION:Opponent: LA Clippers Location: Away Broadcast: Peacock\, NBC S
 	ports BA Final: Warriors 102 - LA Clippers 103 (L)
@@ -496,7 +496,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810381@warriorscalendar
 SUMMARY:Warriors 120 - Milwaukee Bucks 113 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260107T170000
 DESCRIPTION:Opponent: Milwaukee Bucks Location: Home Broadcast: NBC Sports 
 	BA\, FanDuel SN WI Final: Warriors 120 - Milwaukee Bucks 113 (W)
@@ -507,7 +507,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810394@warriorscalendar
 SUMMARY:Warriors 137 - Sacramento Kings 103 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260109T170000
 DESCRIPTION:Opponent: Sacramento Kings Location: Home Broadcast: NBC Sports
 	 BA\, NBC Sports CA\, NBA League Pass Final: Warriors 137 - Sacramento Kin
@@ -519,7 +519,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810411@warriorscalendar
 SUMMARY:Warriors 111 - Atlanta Hawks 124 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260111T153000
 DESCRIPTION:Opponent: Atlanta Hawks Location: Home Broadcast: NBC Sports BA
 	\, FanDuel SN SE\, NBA League Pass Final: Warriors 111 - Atlanta Hawks 124
@@ -531,7 +531,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810425@warriorscalendar
 SUMMARY:Warriors 119 - Portland Trail Blazers 97 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260113T180000
 DESCRIPTION:Opponent: Portland Trail Blazers Location: Home Broadcast: NBC\
 	, Peacock\, NBC Sports BA Final: Warriors 119 - Portland Trail Blazers 97 
@@ -543,7 +543,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810439@warriorscalendar
 SUMMARY:Warriors 126 - New York Knicks 113 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260115T170000
 DESCRIPTION:Opponent: New York Knicks Location: Home Broadcast: Prime Video
 	\, MSG Final: Warriors 126 - New York Knicks 113 (W)
@@ -554,7 +554,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810454@warriorscalendar
 SUMMARY:Warriors 136 - Charlotte Hornets 116 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260117T153000
 DESCRIPTION:Opponent: Charlotte Hornets Location: Home Broadcast: FanDuel S
 	N SE\, NBA League Pass\, NBC Sports BA Final: Warriors 136 - Charlotte Hor
@@ -566,7 +566,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810467@warriorscalendar
 SUMMARY:Warriors 135 - Miami Heat 112 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260119T170000
 DESCRIPTION:Opponent: Miami Heat Location: Home Broadcast: FanDuel SN Sun\,
 	 NBA League Pass\, NBC Sports BA Final: Warriors 135 - Miami Heat 112 (W)
@@ -577,7 +577,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810473@warriorscalendar
 SUMMARY:Warriors 127 - Toronto Raptors 145 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260120T170000
 DESCRIPTION:Opponent: Toronto Raptors Location: Home Broadcast: NBC Sports 
 	BA\, Sportsnet\, NBA League Pass Final: Warriors 127 - Toronto Raptors 145
@@ -589,7 +589,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810485@warriorscalendar
 SUMMARY:Warriors 115 - Dallas Mavericks 123 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260122T143000
 DESCRIPTION:Opponent: Dallas Mavericks Location: Away Broadcast: Prime Vide
 	o\, NBC Sports BA Final: Warriors 115 - Dallas Mavericks 123 (L)
@@ -600,7 +600,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810499@warriorscalendar
 SUMMARY:Warriors 0 - Minnesota Timberwolves 0 (T)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260124T123000
 DESCRIPTION:Opponent: Minnesota Timberwolves Location: Away Final: Warriors
 	 0 - Minnesota Timberwolves 0 (T)
@@ -611,7 +611,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401857824@warriorscalendar
 SUMMARY:Warriors 111 - Minnesota Timberwolves 85 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260125T123000
 DESCRIPTION:Opponent: Minnesota Timberwolves Location: Away Broadcast: NBA 
 	TV\, FanDuel SN North\, NBC Sports BA Final: Warriors 111 - Minnesota Timb
@@ -623,7 +623,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810518@warriorscalendar
 SUMMARY:Warriors 83 - Minnesota Timberwolves 108 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260126T163000
 DESCRIPTION:Opponent: Minnesota Timberwolves Location: Away Broadcast: Peac
 	ock Final: Warriors 83 - Minnesota Timberwolves 108 (L)
@@ -634,7 +634,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810533@warriorscalendar
 SUMMARY:Warriors 140 - Utah Jazz 124 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260128T160000
 DESCRIPTION:Opponent: Utah Jazz Location: Away Broadcast: NBC Sports BA\, N
 	BA League Pass\, KJZZ-TV\, Jazz+ Final: Warriors 140 - Utah Jazz 124 (W)
@@ -645,7 +645,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810551@warriorscalendar
 SUMMARY:Warriors 124 - Detroit Pistons 131 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260130T170000
 DESCRIPTION:Opponent: Detroit Pistons Location: Home Broadcast: ESPN\, FanD
 	uel SN DET\, NBC Sports BA Final: Warriors 124 - Detroit Pistons 131 (L)
@@ -656,7 +656,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810579@warriorscalendar
 SUMMARY:Warriors 94 - Philadelphia 76ers 113 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260203T170000
 DESCRIPTION:Opponent: Philadelphia 76ers Location: Home Broadcast: NBA Leag
 	ue Pass\, NBC Sports Phil +\, NBC Sports BA Final: Warriors 94 - Philadelp
@@ -668,7 +668,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810594@warriorscalendar
 SUMMARY:Warriors 101 - Phoenix Suns 97 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260205T170000
 DESCRIPTION:Opponent: Phoenix Suns Location: Away Broadcast: Prime Video\, 
 	NBC Sports BA\, Arizona's Family 3TV\, Suns Live Final: Warriors 101 - Pho
@@ -680,7 +680,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810608@warriorscalendar
 SUMMARY:Warriors 99 - Los Angeles Lakers 105 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260207T153000
 DESCRIPTION:Opponent: Los Angeles Lakers Location: Away Broadcast: ABC Fina
 	l: Warriors 99 - Los Angeles Lakers 105 (L)
@@ -691,7 +691,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810623@warriorscalendar
 SUMMARY:Warriors 114 - Memphis Grizzlies 113 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260209T170000
 DESCRIPTION:Opponent: Memphis Grizzlies Location: Home Broadcast: NBC Sport
 	s BA\, FanDuel SN SE\, NBA League Pass Final: Warriors 114 - Memphis Grizz
@@ -703,7 +703,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810643@warriorscalendar
 SUMMARY:Warriors 113 - San Antonio Spurs 126 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260211T170000
 DESCRIPTION:Opponent: San Antonio Spurs Location: Home Broadcast: ESPN\, NB
 	C Sports BA\, FanDuel SN SW Final: Warriors 113 - San Antonio Spurs 126 (L
@@ -715,7 +715,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810654@warriorscalendar
 SUMMARY:Warriors 110 - Boston Celtics 121 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260219T170000
 DESCRIPTION:Opponent: Boston Celtics Location: Home Broadcast: Prime Video\
 	, NBC Sports BA\, NBC Sports BO Final: Warriors 110 - Boston Celtics 121 (
@@ -727,7 +727,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810675@warriorscalendar
 SUMMARY:Warriors 128 - Denver Nuggets 117 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260222T103000
 DESCRIPTION:Opponent: Denver Nuggets Location: Home Broadcast: ABC Final: W
 	arriors 128 - Denver Nuggets 117 (W)
@@ -738,7 +738,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810693@warriorscalendar
 SUMMARY:Warriors 109 - New Orleans Pelicans 113 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260224T150000
 DESCRIPTION:Opponent: New Orleans Pelicans Location: Away Broadcast: GCSEN\
 	, Pelicans.com\, NBC Sports BA\, NBA League Pass Final: Warriors 109 - New
@@ -750,7 +750,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810699@warriorscalendar
 SUMMARY:Warriors 133 - Memphis Grizzlies 112 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260225T143000
 DESCRIPTION:Opponent: Memphis Grizzlies Location: Away Broadcast: FanDuel S
 	N SE\, NBC Sports BA Final: Warriors 133 - Memphis Grizzlies 112 (W)
@@ -761,7 +761,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810721@warriorscalendar
 SUMMARY:Warriors 101 - Los Angeles Lakers 129 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260228T153000
 DESCRIPTION:Opponent: Los Angeles Lakers Location: Home Broadcast: ABC Fina
 	l: Warriors 101 - Los Angeles Lakers 129 (L)
@@ -772,7 +772,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810737@warriorscalendar
 SUMMARY:Warriors 101 - LA Clippers 114 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260302T170000
 DESCRIPTION:Opponent: LA Clippers Location: Home Broadcast: Peacock\, NBCSN
 	\, NBC Sports BA\, FanDuel SN SoCal Final: Warriors 101 - LA Clippers 114 
@@ -784,7 +784,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810757@warriorscalendar
 SUMMARY:Warriors 115 - Houston Rockets 113 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260305T143000
 DESCRIPTION:Opponent: Houston Rockets Location: Away Broadcast: Prime Video
 	\, NBC Sports BA Final: Warriors 115 - Houston Rockets 113 (W)
@@ -795,7 +795,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810775@warriorscalendar
 SUMMARY:Warriors 97 - Oklahoma City Thunder 104 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260307T153000
 DESCRIPTION:Opponent: Oklahoma City Thunder Location: Away Broadcast: ABC F
 	inal: Warriors 97 - Oklahoma City Thunder 104 (L)
@@ -806,7 +806,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810789@warriorscalendar
 SUMMARY:Warriors 116 - Utah Jazz 119 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260309T150000
 DESCRIPTION:Opponent: Utah Jazz Location: Away Broadcast: NBC Sports BA\, N
 	BA League Pass\, KJZZ-TV\, Jazz+ Final: Warriors 116 - Utah Jazz 119 (L)
@@ -817,7 +817,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810798@warriorscalendar
 SUMMARY:Warriors 124 - Chicago Bulls 130 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260310T160000
 DESCRIPTION:Opponent: Chicago Bulls Location: Home Broadcast: CHSN\, NBA Le
 	ague Pass\, NBC Sports BA Final: Warriors 124 - Chicago Bulls 130 (L)
@@ -828,7 +828,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810821@warriorscalendar
 SUMMARY:Warriors 117 - Minnesota Timberwolves 127 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260313T160000
 DESCRIPTION:Opponent: Minnesota Timberwolves Location: Home Broadcast: Prim
 	e Video\, NBC Sports BA Final: Warriors 117 - Minnesota Timberwolves 127 (
@@ -840,7 +840,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810836@warriorscalendar
 SUMMARY:Warriors 107 - New York Knicks 110 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260315T140000
 DESCRIPTION:Opponent: New York Knicks Location: Away Broadcast: NBC\, Peaco
 	ck Final: Warriors 107 - New York Knicks 110 (L)
@@ -851,7 +851,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810839@warriorscalendar
 SUMMARY:Warriors 125 - Washington Wizards 117 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260316T130000
 DESCRIPTION:Opponent: Washington Wizards Location: Away Broadcast: MNMT\, N
 	BC Sports BA\, NBA League Pass Final: Warriors 125 - Washington Wizards 11
@@ -863,7 +863,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810854@warriorscalendar
 SUMMARY:Warriors 99 - Boston Celtics 120 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260318T130000
 DESCRIPTION:Opponent: Boston Celtics Location: Away Broadcast: ESPN\, NBC S
 	ports BO\, NBC Sports BA Final: Warriors 99 - Boston Celtics 120 (L)
@@ -874,7 +874,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810872@warriorscalendar
 SUMMARY:Warriors 101 - Detroit Pistons 115 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260320T133000
 DESCRIPTION:Opponent: Detroit Pistons Location: Away Broadcast: FanDuel SN 
 	DET\, NBC Sports BA Final: Warriors 101 - Detroit Pistons 115 (L)
@@ -885,7 +885,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810881@warriorscalendar
 SUMMARY:Warriors 110 - Atlanta Hawks 126 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260321T140000
 DESCRIPTION:Opponent: Atlanta Hawks Location: Away Broadcast: FanDuel SN SE
 	\, NBC Sports BA\, NBA League Pass Final: Warriors 110 - Atlanta Hawks 126
@@ -897,7 +897,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810899@warriorscalendar
 SUMMARY:Warriors 137 - Dallas Mavericks 131 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260323T153000
 DESCRIPTION:Opponent: Dallas Mavericks Location: Away Broadcast: Peacock\, 
 	NBCSN\, NBC Sports BA Final: Warriors 137 - Dallas Mavericks 131 (W)
@@ -908,7 +908,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810915@warriorscalendar
 SUMMARY:Warriors 109 - Brooklyn Nets 106 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260325T160000
 DESCRIPTION:Opponent: Brooklyn Nets Location: Home Broadcast: NBC Sports BA
 	\, YES\, NBA League Pass Final: Warriors 109 - Brooklyn Nets 106 (W)
@@ -919,7 +919,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810928@warriorscalendar
 SUMMARY:Warriors 131 - Washington Wizards 126 (W)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260327T160000
 DESCRIPTION:Opponent: Washington Wizards Location: Home Broadcast: MNMT\, N
 	BA League Pass\, NBC Sports BA Final: Warriors 131 - Washington Wizards 12
@@ -931,7 +931,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810945@warriorscalendar
 SUMMARY:Warriors 93 - Denver Nuggets 116 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260329T160000
 DESCRIPTION:Opponent: Denver Nuggets Location: Away Broadcast: NBC\, Peacoc
 	k Final: Warriors 93 - Denver Nuggets 116 (L)
@@ -942,7 +942,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810968@warriorscalendar
 SUMMARY:Warriors 113 - San Antonio Spurs 127 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260401T160000
 DESCRIPTION:Opponent: San Antonio Spurs Location: Home Broadcast: ESPN\, NB
 	C Sports BA\, FanDuel SN SW Final: Warriors 113 - San Antonio Spurs 127 (L
@@ -954,7 +954,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810972@warriorscalendar
 SUMMARY:Warriors 111 - Cleveland Cavaliers 118 (L)
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260402T160000
 DESCRIPTION:Opponent: Cleveland Cavaliers Location: Home Broadcast: NBC Spo
 	rts BA\, FanDuel SN OH\, NBA League Pass Final: Warriors 111 - Cleveland C
@@ -966,7 +966,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401810997@warriorscalendar
 SUMMARY:Warriors vs Houston Rockets (HOME) - 4:00 PM HST
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260405T160000
 DESCRIPTION:Opponent: Houston Rockets Location: Home Broadcast: NBC\, Peaco
 	ck Tipoff: 4:00 PM HST
@@ -977,7 +977,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401811009@warriorscalendar
 SUMMARY:Warriors vs Sacramento Kings (HOME) - 4:00 PM HST
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260407T160000
 DESCRIPTION:Opponent: Sacramento Kings Location: Home Broadcast: NBC Sports
 	 BA\, NBC Sports CA\, NBA League Pass Tipoff: 4:00 PM HST
@@ -988,7 +988,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401811025@warriorscalendar
 SUMMARY:Warriors vs Los Angeles Lakers (HOME) - 4:00 PM HST
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260409T160000
 DESCRIPTION:Opponent: Los Angeles Lakers Location: Home Broadcast: Prime Vi
 	deo Tipoff: 4:00 PM HST
@@ -999,7 +999,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401811039@warriorscalendar
 SUMMARY:Warriors vs Sacramento Kings (AWAY) - 4:00 PM HST
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260410T160000
 DESCRIPTION:Opponent: Sacramento Kings Location: Away Broadcast: NBC Sports
 	 BA\, NBA League Pass\, NBC Sports CA Tipoff: 4:00 PM HST
@@ -1010,7 +1010,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:espn-nba-401811054@warriorscalendar
 SUMMARY:Warriors vs LA Clippers (AWAY) - 2:30 PM HST
-DTSTAMP:20260403T180247Z
+DTSTAMP:20260404T155911Z
 DTSTART:20260412T143000
 DESCRIPTION:Opponent: LA Clippers Location: Away Broadcast: NBC Sports BA\,
 	 NBA League Pass\, FanDuel SN SoCal Tipoff: 2:30 PM HST
